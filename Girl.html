@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>For My GirlFriend</title>
+    <style>
+        /* body {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/016/776/606/small/realistic-valentines-day-red-background-with-hearth-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .next-btn, .no-btn, .choco-btn, .screenshot-btn {
+            background: pink;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .no-btn {
+            position: relative;
+        }
+        .shake {
+            animation: shake 0.5s infinite;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+        }
+        .chat-box {
+            margin-top: 20px;
+            display: none;
+        }
+        .chat {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .chat img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .chat.reply {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+        .hidden { 
+            display: none; 
+        }
+        .big-btn { 
+            font-size: 1.5em; 
+        }
+        .move-away { 
+            position: absolute; 
+            transition: 0.3s; 
+        }
+        .warning-text { 
+            color: red; 
+            font-weight: bold; 
+            margin-top: 10px; 
+            position: absolute; 
+            left: calc(50% - 100px); 
+        }
+        .img-cover{
+            width: 150px; 
+            height: auto;
+        }
+        .p-cover{
+            max-width: 300px; 
+            text-align: center; 
+            display: flex;
+            font-size: 18px; 
+            margin-top: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="cover">
+            <img src="val.jpg" alt="Love Image" class="img-cover">
+            <div class="div-text">
+                <p class="p-cover">
+                    selamattt hariiii valentineee ekeeeee, akuuuuu udaaaaaa buatttt iniii spesiall untukkk muuuuuu, jadiii jangannnn di skippp yaaaaaa ❤️
+                </p>
+                <div class="div-button-cover">
+                    <button class="next-btn" onclick="nextPage()">Next</button>
+                    <button class="no-btn" onclick="shakeButton()">Tidak</button>
+                </div>
+                <p id="warning">
+                    seriusss nihhhh gamauuuu lanjuttt? akuuuuu udaaaaaa buatttt iniii semingguuuuu lebihhhh lohhhhh
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="chat-box" id="chatBox">
+            <div class="chat">
+                <img src="ekeeee (2).jpeg" alt="Foto Kayla">
+                <p>
+                    selamattt hariii valentineee ekeeeee, 
+                    kauuuu ituuuuu kayakkk langitttt favoritttt muuuuu, 
+                    selaluuuu indahhhhh di setiapp waktuuuu, 
+                    makasihhh udaaaaa jadiiii bagiannnn palinggg berhargaaaa 
+                    di hidupp kuuuuuu, semogaaaa kitaaaa terusss salingg 
+                    membahagiakannnn yaaaaaaa
+                </p>
+            </div>
+            <button class="next-btn" onclick="nextChoco()">Next</button>
+            <button class="no-btn" onclick="increaseNext()">Tidak</button>
+        </div>
+
+        <div class="chat-box" id="chocoBox">
+            <p>
+                ekeeee, kalo valentinee identikkk samaaa coklattt,
+                berartiii akuuuu harusss ngasiii kauuuu banyakkkk 
+                coklatttt donggg, biarrr kauuuu tauuuu kalo akuuuu 
+                sukaaaa pakeee bangettt sama kauuuu, tapiii 
+                kayakkk nyaaaaa, kalo akuuuu kasiiii satuuuu 
+                duniaaaa coklatttt, ituuuuu masiiii kuranggg buattt 
+                nunjukinnn betapaaaa berhargaaaa nyaaaaaaa kauuuuu 
+                buatttt akuuuuu
+            </p>
+            <button class="choco-btn" onclick="chooseChoco(2)">2 Coklat</button>
+            <button class="choco-btn move-away" id="tenChoco" onclick="moveButton()">10 Coklat</button>
+            <p id="chocoWarning" class="hidden warning-text">
+                gaaaaa boleeee makannnn coklatt banyaaaa banyaaaa nantiii 
+                diabetesss, akuuuu udaaaaa kenaaaa soal nyaaaaa, setiap akuuu 
+                ngeliattt kauuuu ituuuu akuuuuu selaluuuu kenaaaa diabetessss, 
+                soal nyaaaaa kauuuu ituuuuu manissss kaliii lebiiii manisss 
+                dariii coklattt
+            </p>
+        </div>
+
+        <div class="chat-box" id="resultBox">
+            <p>nahhhh gituuuu donggg 2 ajaaaa</p>
+            <button class="screenshot-btn" onclick="takeScreenshot()">Screenshot</button>
+        </div>
+    </div>
+
+    <audio id="myaudio">
+        <source id="audiosource" src="anugerah_terindah.mp3" type="audio/mp3">
+    </audio>
+    
+    <!-- <button onclick="gantiLagu('bunga_abadi.mp3')">Ganti Lagu ke Bunga Abadi</button> -->
+    
+    <script>
+        function gantiLagu(namaFile) {
+            let audio = document.getElementById("myaudio");
+            let source = document.getElementById("audiosource");
+    
+            source.src = namaFile;
+            audio.load(); // Muat ulang audio
+            audio.play(); // Mainkan musiknya
+        }
+    
+        // Autoplay setelah user klik layar (kalau autoplay dicegah)
+        document.addEventListener("click", function () {
+            let audio = document.getElementById("myaudio");
+            audio.play();
+        });
+    </script>
+    
+
+    <!-- <script>
+        // function nextPage() {
+        //     document.getElementById('cover').style.display = 'none';
+        //     document.getElementById('chatBox').style.display = 'block';
+        // }
+
+        // function nextChoco() {
+        //     document.getElementById('chatBox').style.display = 'none';
+        //     document.getElementById('chocoBox').style.display = 'block';
+        // }
+
+        // function shakeButton() {
+        //     let btn = document.querySelector('.no-btn');
+        //     let warning = document.getElementById('warning');
+        //     btn.classList.add('shake');
+        //     warning.classList.remove('hidden');
+        //     setTimeout(() => btn.classList.remove('shake'), 2000);
+        // }
+
+        // function moveButton() {
+        //     let btn = document.getElementById('tenChoco');
+        //     let warning = document.getElementById('chocoWarning');
+        //     let randomX = Math.floor(Math.random() * 200) - 100;
+        //     let randomY = Math.floor(Math.random() * 200) - 100;
+        //     btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        //     warning.classList.remove('hidden');
+        // }
+
+        // function increaseNext() {
+        //     let nextBtn = document.querySelector("#chatBox .next-btn");
+        //     nextBtn.classList.add("big-btn");
+        // }
+
+        // function chooseChoco(choice) {
+        //     if (choice === 2) {
+        //         document.getElementById('chocoBox').style.display = 'none';
+        //         document.getElementById('resultBox').style.display = 'block';
+        //     }
+        // }
+
+        // function takeScreenshot() {
+        //     html2canvas(document.body).then(canvas => {
+        //         let link = document.createElement('a');
+        //         link.download = 'valentine_page.png';
+        //         link.href = canvas.toDataURL();
+        //         link.click();
+        //     });
+        // }
+
+        // function shakeButton() {
+        //     let warningText = document.getElementById("warning");
+        //     warningText.style.display = "block"; // Menampilkan teks peringatan
+        // }
+    </script> -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</body>
+</html>

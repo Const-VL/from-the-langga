@@ -1,0 +1,126 @@
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/016/776/606/small/realistic-valentines-day-red-background-with-hearth-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+.container {
+    text-align: center;
+}
+/* .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} */
+.next-btn, .no-btn, .choco-btn, .screenshot-btn {
+    background: pink;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+.no-btn {
+    position: relative;
+}
+.shake {
+    animation: shake 0.5s infinite;
+}
+@keyframes shake {
+    0% { 
+        transform: translateX(0); 
+    }
+    25% { 
+        transform: translateX(-5px); 
+    }
+    50% { 
+        transform: translateX(5px); 
+    }
+    75% { 
+        transform: translateX(-5px); 
+    }
+    100% { 
+        transform: translateX(5px); 
+    }
+}
+.chat-box {
+    margin-top: 20px;
+    display: none;
+}
+.chat {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.chat img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.chat.reply {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.hidden { 
+    display: none; 
+}
+.big-btn { 
+    font-size: 1.5em; 
+}
+.move-away { 
+    position: absolute; 
+    transition: 0.3s; 
+}
+.warning-text { 
+    color: red; 
+    font-weight: bold; 
+    margin-top: 10px; 
+    position: absolute; 
+    left: calc(50% - 100px); 
+    /* display: flex;
+    text-align: center;
+    justify-content: center; */
+}
+.img-cover{
+    width: 150px; 
+    height: auto; 
+    border-radius: 10px;
+}
+.p-cover{
+    max-width: 300px; 
+    text-align: center; 
+    font-size: 18px; 
+    margin: 0;
+}
+#cover{
+    display: flex; 
+    align-items: center; 
+    gap: 15px; padding: 15px; 
+    max-width: 500px; 
+    background: white; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.div-text{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+.div-button-cover{
+    margin-top: 10px;
+}
+#warning{
+    display: none; 
+    color: red; 
+    margin-top: 10px; 
+    text-align: center;
+}
