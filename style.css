@@ -128,3 +128,15 @@ body {
     margin-top: 10px; 
     text-align: center;
 }
+
+
+@media (max-width: 480px) {
+    .chat-box {
+        margin-top: 20px;
+        display: none;
+        width: 50%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+    }
+}
