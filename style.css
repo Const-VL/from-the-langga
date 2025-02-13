@@ -130,8 +130,8 @@ body {
 }
 
 
-@media (max-width: 480px) {
-    .chat-box {
+@media (max-width: 500px) {
+    .chat {
         margin-top: 20px;
         display: none;
         width: 50%;
