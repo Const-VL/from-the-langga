@@ -9,11 +9,22 @@ function nextChoco() {
 }
 
 function shakeButton() {
-    let btn = document.querySelector('.no-btn');
-    let warning = document.getElementById('warning');
-    btn.classList.add('shake');
-    warning.classList.remove('hidden');
-    setTimeout(() => btn.classList.remove('shake'), 2000);
+    
+
+    Swal.fire({
+        icon: 'warning', 
+        title: 'Awas!!!',
+        text: 'seriusss nihhhh gamauuuu lanjuttt? akuuuuu udaaaaaa buatttt iniii semingguuuuu lebihhhh lohhhhh',
+        confirmButtonText: 'Iya deh, aku lanjut',
+        background: '#f2dede',
+        color: '#721c24',
+        confirmButtonColor: '#d33',
+        willOpen: () => {
+            // Menambahkan z-index di dalam SweetAlert2 menggunakan `willOpen`
+            const swalPopup = document.querySelector('.swal2-popup');
+            swalPopup.style.zIndex = '9999';
+        }
+    });
 }
 
 function moveButton() {
@@ -49,20 +60,30 @@ function chooseChoco(choice) {
     if (choice === 2) {
         document.getElementById('chocoBox').style.display = 'none';
         document.getElementById('resultBox').style.display = 'block';
+        Swal.fire({
+            icon: 'warning', 
+            title: 'Awas!!!',
+            text: 'nahhhh gituuuu donggg 2 ajaaaa, nantiii kirimm ss annn nyaaaa ke akuuuu, biarrr coklattt nyaaaa datangg',
+            confirmButtonText: 'Oke, Aku Paham!',
+            background: '#f2dede',
+            color: '#721c24',
+            confirmButtonColor: '#d33',
+            willOpen: () => {
+                // Menambahkan z-index di dalam SweetAlert2 menggunakan `willOpen`
+                const swalPopup = document.querySelector('.swal2-popup');
+                swalPopup.style.zIndex = '9999';
+            }
+        });
     }
   
 }
 
 function takeScreenshot() {
+    
     html2canvas(document.body).then(canvas => {
         let link = document.createElement('a');
         link.download = 'valentine_page.png';
         link.href = canvas.toDataURL();
         link.click();
     });
-}
-
-function shakeButton() {
-    let warningText = document.getElementById("warning");
-    warningText.style.display = "block"; // Menampilkan teks peringatan
 }
