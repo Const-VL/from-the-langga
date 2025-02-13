@@ -5,98 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>For My GirlFriend</title>
-    <style>
-        /* body {
-            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/016/776/606/small/realistic-valentines-day-red-background-with-hearth-vector.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .next-btn, .no-btn, .choco-btn, .screenshot-btn {
-            background: pink;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-        }
-        .no-btn {
-            position: relative;
-        }
-        .shake {
-            animation: shake 0.5s infinite;
-        }
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            50% { transform: translateX(5px); }
-            75% { transform: translateX(-5px); }
-            100% { transform: translateX(5px); }
-        }
-        .chat-box {
-            margin-top: 20px;
-            display: none;
-        }
-        .chat {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .chat img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        .chat.reply {
-            flex-direction: row-reverse;
-            text-align: right;
-        }
-        .hidden { 
-            display: none; 
-        }
-        .big-btn { 
-            font-size: 1.5em; 
-        }
-        .move-away { 
-            position: absolute; 
-            transition: 0.3s; 
-        }
-        .warning-text { 
-            color: red; 
-            font-weight: bold; 
-            margin-top: 10px; 
-            position: absolute; 
-            left: calc(50% - 100px); 
-        }
-        .img-cover{
-            width: 150px; 
-            height: auto;
-        }
-        .p-cover{
-            max-width: 300px; 
-            text-align: center; 
-            display: flex;
-            font-size: 18px; 
-            margin-top: 10px;
-        } */
-    </style>
+   
 </head>
 <body>
     <div class="container">
@@ -146,13 +55,6 @@
             </p>
             <button class="choco-btn" onclick="chooseChoco(2)">2 Coklat</button>
             <button class="choco-btn move-away" id="tenChoco" onclick="moveButton()">10 Coklat</button>
-            <p id="chocoWarning" class="hidden warning-text">
-                gaaaaa boleeee makannnn coklatt banyaaaa banyaaaa nantiii 
-                diabetesss, akuuuu udaaaaa kenaaaa soal nyaaaaa, setiap akuuu 
-                ngeliattt kauuuu ituuuu akuuuuu selaluuuu kenaaaa diabetessss, 
-                soal nyaaaaa kauuuu ituuuuu manissss kaliii lebiiii manisss 
-                dariii coklattt
-            </p>
         </div>
 
         <div class="chat-box" id="resultBox">
@@ -184,62 +86,10 @@
         });
     </script>
     
-
-    <!-- <script>
-        // function nextPage() {
-        //     document.getElementById('cover').style.display = 'none';
-        //     document.getElementById('chatBox').style.display = 'block';
-        // }
-
-        // function nextChoco() {
-        //     document.getElementById('chatBox').style.display = 'none';
-        //     document.getElementById('chocoBox').style.display = 'block';
-        // }
-
-        // function shakeButton() {
-        //     let btn = document.querySelector('.no-btn');
-        //     let warning = document.getElementById('warning');
-        //     btn.classList.add('shake');
-        //     warning.classList.remove('hidden');
-        //     setTimeout(() => btn.classList.remove('shake'), 2000);
-        // }
-
-        // function moveButton() {
-        //     let btn = document.getElementById('tenChoco');
-        //     let warning = document.getElementById('chocoWarning');
-        //     let randomX = Math.floor(Math.random() * 200) - 100;
-        //     let randomY = Math.floor(Math.random() * 200) - 100;
-        //     btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
-        //     warning.classList.remove('hidden');
-        // }
-
-        // function increaseNext() {
-        //     let nextBtn = document.querySelector("#chatBox .next-btn");
-        //     nextBtn.classList.add("big-btn");
-        // }
-
-        // function chooseChoco(choice) {
-        //     if (choice === 2) {
-        //         document.getElementById('chocoBox').style.display = 'none';
-        //         document.getElementById('resultBox').style.display = 'block';
-        //     }
-        // }
-
-        // function takeScreenshot() {
-        //     html2canvas(document.body).then(canvas => {
-        //         let link = document.createElement('a');
-        //         link.download = 'valentine_page.png';
-        //         link.href = canvas.toDataURL();
-        //         link.click();
-        //     });
-        // }
-
-        // function shakeButton() {
-        //     let warningText = document.getElementById("warning");
-        //     warningText.style.display = "block"; // Menampilkan teks peringatan
-        // }
-    </script> -->
+  
     <script src="script.js"></script>
+    <!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </body>
 </html>
