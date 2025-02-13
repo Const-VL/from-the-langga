@@ -128,7 +128,12 @@ body {
     margin-top: 10px; 
     text-align: center;
 }
-
+.screenshot-btn{
+    width: 100%;
+}
+.btn-ss{
+    width: 100%;
+}
 
 @media (max-width: 500px) {
     .chat {
