@@ -133,10 +133,15 @@ body {
 @media (max-width: 500px) {
     .chat {
         margin-top: 20px;
-        display: none;
-        width: 50%;
+        width: 100%;
         flex-wrap: wrap;
         flex-direction: column;
         text-align: center;
+    }
+    .chat p{
+        font-size: 0.8rem;
+    }
+    .button{
+        display: flex;
     }
 }
