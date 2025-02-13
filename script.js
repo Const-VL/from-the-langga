@@ -62,7 +62,7 @@ function chooseChoco(choice) {
         document.getElementById('resultBox').style.display = 'block';
         Swal.fire({
             icon: 'warning', 
-            title: 'Awas!!!',
+            title: 'Baca!!!',
             text: 'nahhhh gituuuu donggg 2 ajaaaa, nantiii kirimm ss annn nyaaaa ke akuuuu, biarrr coklattt nyaaaa datangg',
             confirmButtonText: 'Oke, Aku Paham!',
             background: '#f2dede',
