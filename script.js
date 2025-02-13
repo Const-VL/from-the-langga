@@ -22,8 +22,23 @@ function moveButton() {
     let randomX = Math.floor(Math.random() * 200) - 100;
     let randomY = Math.floor(Math.random() * 200) - 100;
     btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
-    warning.classList.remove('hidden');
+
+    Swal.fire({
+        icon: 'warning', 
+        title: 'Awas!!!',
+        text: 'Gaaaaa boleeee makannnn coklatt banyaaaa banyaaaa nantiii diabetesss, akuuuu udaaaaa kenaaaa soal nyaaaaa, setiap akuuu ngeliattt kauuuu ituuuu akuuuuu selaluuuu kenaaaa diabetessss, soal nyaaaaa kauuuu ituuuuu manissss kaliii lebiiii manisss dariii coklattt',
+        confirmButtonText: 'Oke, Aku Paham!',
+        background: '#f2dede',
+        color: '#721c24',
+        confirmButtonColor: '#d33',
+        willOpen: () => {
+            // Menambahkan z-index di dalam SweetAlert2 menggunakan `willOpen`
+            const swalPopup = document.querySelector('.swal2-popup');
+            swalPopup.style.zIndex = '9999';
+        }
+    });
 }
+
 
 function increaseNext() {
     let nextBtn = document.querySelector("#chatBox .next-btn");
@@ -35,6 +50,7 @@ function chooseChoco(choice) {
         document.getElementById('chocoBox').style.display = 'none';
         document.getElementById('resultBox').style.display = 'block';
     }
+  
 }
 
 function takeScreenshot() {
